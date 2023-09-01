@@ -1,0 +1,529 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+@mixin pos($size) {
+  top: calc(50% - $size/2);
+  left: calc(50% - $size/2);
+  height: $size;
+  width: $size;
+}
+@mixin piece() {
+  position: absolute;
+  @include pos(50vh);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+h2 {
+  position: absolute;
+  top: 10%;
+  font-size: 50px;
+}
+p {
+  font-size: 12px;
+}
+
+h1 {
+  display: none;
+  font-size: 2rem;
+  color: #000;
+  z-index: 100;
+  position: absolute;
+}
+.animals {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 0.5rem;
+  background-color: #76a28c;
+  padding: 2rem;
+}
+.bg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  // background-image: url("./1.jpg");
+}
+
+.ear1 {
+  @include piece();
+  background-color: #de5c48;
+  clip-path: polygon(42% 18%, 76% 24%, 68% 29%);
+  animation: ear1 3.5s 1.5s infinite ease;
+}
+@keyframes ear1 {
+  80% {
+    clip-path: polygon(41% 16%, 76% 24%, 68% 30%);
+  }
+  100% {
+    clip-path: polygon(42% 18%, 76% 24%, 68% 29%);
+  }
+}
+.ear2 {
+  @include piece();
+  background-color: #88857e;
+  clip-path: polygon(38% 24%, 42% 18%, 68% 29%);
+  animation: ear2 3.5s 1.5s infinite ease;
+}
+@keyframes ear2 {
+  80% {
+    clip-path: polygon(38% 24%, 41% 16%, 68% 29%);
+  }
+  100% {
+    clip-path: polygon(38% 24%, 42% 18%, 68% 29%);
+  }
+}
+.ear3 {
+  @include piece();
+  background-color: #c9c5c3;
+  clip-path: polygon(38% 24%, 50% 42%, 68% 29%);
+  animation: ear3 3.5s 1.5s infinite ease;
+}
+@keyframes ear3 {
+  80% {
+    clip-path: polygon(38% 22%, 50% 40%, 68% 29%);
+  }
+  100% {
+    clip-path: polygon(38% 24%, 50% 42%, 68% 29%);
+  }
+}
+.ear4 {
+  @include piece();
+  background-color: #c1bdbb;
+  clip-path: polygon(36% 31%, 38% 24%, 50% 42%);
+  animation: ear4 3.5s 1.5s infinite ease;
+}
+@keyframes ear4 {
+  80% {
+    clip-path: polygon(36% 28%, 38% 22%, 50% 40%);
+  }
+  100% {
+    clip-path: polygon(36% 31%, 38% 24%, 50% 42%);
+  }
+}
+.ear5 {
+  @include piece();
+  background-color: #1e0002;
+  clip-path: polygon(28% 15%, 42% 18%, 38% 24%, 36% 31%);
+  animation: ear5 3.5s 1.5s infinite ease;
+}
+@keyframes ear5 {
+  80% {
+    clip-path: polygon(28% 10%, 41% 16%, 38% 24%, 36% 28%);
+  }
+  100% {
+    clip-path: polygon(28% 15%, 42% 18%, 38% 24%, 36% 31%);
+  }
+}
+.head3 {
+  @include piece();
+  background-color: #e6614a;
+  clip-path: polygon(50% 42%, 68% 29%, 68% 44%, 63% 37%);
+  animation: head3 3.5s 1.5s infinite ease;
+}
+@keyframes head3 {
+  80% {
+    clip-path: polygon(50% 40%, 68% 28%, 68% 44%, 63% 37%);
+  }
+  100% {
+    clip-path: polygon(50% 42%, 68% 29%, 68% 44%, 63% 37%);
+  }
+}
+.ear6 {
+  @include piece();
+  background-color: #1e0002;
+  clip-path: polygon(44% 13%, 56% 16%, 51% 20%, 46% 19%);
+}
+.ear7 {
+  @include piece();
+  background-color: #fe7759;
+  clip-path: polygon(56% 16%, 80% 22%, 76% 24%, 51% 20%);
+}
+.ear8 {
+  @include piece();
+  background-color: #fd6a4e;
+  clip-path: polygon(51% 20%, 53.5% 18%, 63% 22%);
+}
+.ear9 {
+  @include piece();
+  background-color: #7e3b2c;
+  clip-path: polygon(57% 37%, 63% 37%, 60% 40%);
+}
+.ear10 {
+  @include piece();
+  background-color: #3d1811;
+  clip-path: polygon(60% 40%, 63% 37%, 64% 38%);
+}
+
+.head1 {
+  @include piece();
+  background-color: #fe7759;
+  clip-path: polygon(76% 24%, 80% 22%, 87% 26%, 90% 26%, 86% 27%);
+}
+.head2 {
+  @include piece();
+  background-color: #fd6952;
+  clip-path: polygon(68% 44%, 68% 29%, 76% 24%, 86% 27%, 88% 35%, 80% 37%);
+}
+.head5 {
+  @include piece();
+  background-color: #eb624a;
+  clip-path: polygon(88% 35%, 86% 27%, 90% 26%);
+}
+
+.head4 {
+  @include piece();
+  background-color: #d7cdc7;
+  clip-path: polygon(80% 37%, 88% 35%, 92% 29%, 88% 40%);
+  animation: head4 2s 1.5s infinite;
+}
+@keyframes head4 {
+  0% {
+    clip-path: polygon(80% 37%, 88% 35%, 92% 28%, 88% 40%);
+  }
+  20% {
+    clip-path: polygon(80% 37%, 88% 35%, 92% 29%, 88% 40%);
+  }
+  80% {
+    clip-path: polygon(80% 37%, 88% 35%, 92% 28%, 88% 40%);
+  }
+  100% {
+    clip-path: polygon(80% 37%, 88% 35%, 92% 29%, 88% 40%);
+  }
+}
+
+.head6 {
+  @include piece();
+  background-color: #df5e4b;
+  clip-path: polygon(88% 35%, 90% 26%, 92% 29%);
+  animation: head6 2s 1.5s infinite;
+}
+@keyframes head6 {
+  0% {
+    clip-path: polygon(88% 35%, 90% 26%, 92% 28%);
+  }
+  20% {
+    clip-path: polygon(88% 35%, 90% 26%, 92% 29%);
+  }
+  80% {
+    clip-path: polygon(88% 35%, 90% 26%, 92% 28%);
+  }
+  100% {
+    clip-path: polygon(88% 35%, 90% 26%, 92% 29%);
+  }
+}
+.head7 {
+  @include piece();
+  background-color: #190104;
+  clip-path: polygon(90% 26%, 93% 25%, 92% 29%);
+  animation: head7 2s 1.5s infinite;
+}
+@keyframes head7 {
+  0% {
+    clip-path: polygon(90% 26%, 92.5% 25%, 92% 28%);
+  }
+  20% {
+    clip-path: polygon(90% 26%, 93% 25%, 92% 29%);
+  }
+  80% {
+    clip-path: polygon(90% 26%, 92.5% 25%, 92% 28%);
+  }
+  100% {
+    clip-path: polygon(90% 26%, 93% 25%, 92% 29%);
+  }
+}
+.head8 {
+  @include piece();
+  background-color: #9d9c9a;
+  clip-path: polygon(68% 44%, 80% 37%, 88% 40%, 80% 46%);
+}
+
+.head9 {
+  @include piece();
+  background-color: #888b87;
+  clip-path: polygon(65% 42%, 80% 46%, 71% 51%);
+}
+.head10 {
+  @include piece();
+  background-color: #b5b4b2;
+  clip-path: polygon(92% 29%, 88% 40%, 90% 39%);
+  animation: head10 2s 1.5s infinite;
+}
+@keyframes head10 {
+  0% {
+    clip-path: polygon(92% 28%, 88% 40%, 90% 39%);
+  }
+  20% {
+    clip-path: polygon(92% 29%, 88% 40%, 90% 39%);
+  }
+  80% {
+    clip-path: polygon(92% 28%, 88% 40%, 90% 39%);
+  }
+  100% {
+    clip-path: polygon(92% 29%, 88% 40%, 90% 39%);
+  }
+}
+.head11 {
+  @include piece();
+  background-color: #929291;
+  clip-path: polygon(75% 54%, 80% 46%, 88% 40%, 90% 39%);
+}
+.head12 {
+  @include piece();
+  background-color: #6b6b6a;
+  clip-path: polygon(71% 51%, 80% 46%, 75% 54%);
+}
+.head13 {
+  @include piece();
+  background-color: #848784;
+  clip-path: polygon(69% 57%, 71% 51%, 75% 54%);
+}
+.body1 {
+  @include piece();
+  background-color: #c64e41;
+  clip-path: polygon(61% 46%, 63.8% 38%, 67.5% 43%);
+}
+
+.body2 {
+  @include piece();
+  background-color: #ce5642;
+  clip-path: polygon(48% 47%, 50% 43%, 61% 41%, 61% 46%);
+}
+.body3 {
+  @include piece();
+  background-color: #d85a46;
+  clip-path: polygon(46% 51%, 48% 47%, 61% 46%, 59% 53%, 57% 51%, 53% 58%);
+}
+
+.body4 {
+  @include piece();
+  background-color: #cf5743;
+  clip-path: polygon(59% 53%, 61% 46%, 66% 42%, 67% 52%);
+}
+.body5 {
+  @include piece();
+  background-color: #883a2c;
+  clip-path: polygon(67% 52%, 66% 42%, 71% 51%);
+}
+.body6 {
+  @include piece();
+  background-color: #ac4933;
+  clip-path: polygon(59% 53%, 67% 52%, 63% 64%);
+}
+.body7 {
+  @include piece();
+  background-color: #984130;
+  clip-path: polygon(63% 64%, 67% 52%, 71% 51%, 67% 63%);
+}
+.body8 {
+  @include piece();
+  background-color: #a7a59d;
+  clip-path: polygon(55% 58%, 57% 51%, 59% 53%, 58% 59%);
+}
+.body9 {
+  @include piece();
+  background-color: #797777;
+  clip-path: polygon(55% 58%, 57% 51%, 58% 59%, 59% 53%, 61% 58%, 58% 59%);
+}
+.body10 {
+  @include piece();
+  background-color: #db6044;
+  clip-path: polygon(46% 51%, 53% 58%, 48% 61%);
+}
+.body11 {
+  @include piece();
+  background-color: #7c382b;
+  clip-path: polygon(48% 61%, 53% 58%, 57% 51%, 55% 60%);
+}
+
+.body12 {
+  @include piece();
+  background-color: #99412d;
+  clip-path: polygon(46% 58%, 46% 51%, 48% 61%, 48% 64%);
+}
+.body13 {
+  @include piece();
+  background-color: #6e2e20;
+  clip-path: polygon(48% 64%, 48% 61%, 54% 60%, 52.5% 63%, 51% 63%, 50% 64%);
+}
+.body14 {
+  @include piece();
+  background-color: #3f403e;
+  clip-path: polygon(55% 60%, 55.5% 58%, 58% 59%, 61% 58%, 63.5% 60%, 58% 59%);
+}
+.body15 {
+  @include piece();
+  background-color: #cc5b49;
+  clip-path: polygon(61% 41%, 61% 46%, 64% 38%);
+}
+.body16 {
+  @include piece();
+  background-color: #cc5b49;
+  clip-path: polygon(44% 61%, 46% 58%, 48% 64%);
+}
+.body17 {
+  //補前面腳
+  @include piece();
+  background-color: #83372a;
+  clip-path: polygon(67% 63%, 69% 57%, 71% 56%, 68% 63%);
+}
+
+.tail1 {
+  @include piece();
+  background-color: #d15742;
+  clip-path: polygon(32% 41%, 48% 47%, 50% 43%);
+  animation: tail1 1.5s 3s ease infinite;
+}
+@keyframes tail1 {
+  90% {
+    clip-path: polygon(34% 41%, 48% 47%, 50% 43%);
+  }
+  100% {
+    clip-path: polygon(32% 41%, 48% 47%, 50% 43%);
+  }
+}
+.tail2 {
+  @include piece();
+  background-color: #fc654e;
+  clip-path: polygon(32% 41%, 35% 40%, 50% 43%);
+  animation: tail2 1.5s 3s ease infinite;
+}
+@keyframes tail2 {
+  90% {
+    clip-path: polygon(34% 41%, 35% 40%, 50% 43%);
+  }
+  100% {
+    clip-path: polygon(32% 41%, 35% 40%, 50% 43%);
+  }
+}
+.tail3 {
+  @include piece();
+  background-color: #e7614a;
+  clip-path: polygon(18% 60%, 32% 41%, 48% 47%, 36% 59%);
+  animation: tail3 1.5s 3s ease infinite;
+}
+@keyframes tail3 {
+  90% {
+    clip-path: polygon(18% 57%, 34% 41%, 48% 47%, 36% 60%);
+  }
+  100% {
+    clip-path: polygon(18% 60%, 32% 41%, 48% 47%, 36% 59%);
+  }
+}
+.tail4 {
+  @include piece();
+  background-color: #87392c;
+  clip-path: polygon(36% 59%, 48% 47%, 43% 64%);
+  animation: tail4 1.5s 3s ease infinite;
+}
+@keyframes tail4 {
+  90% {
+    clip-path: polygon(33% 59%, 48% 47%, 43% 64%);
+  }
+  100% {
+    clip-path: polygon(36% 59%, 48% 47%, 43% 64%);
+  }
+}
+.tail5 {
+  @include piece();
+  background-color: #52211a;
+  clip-path: polygon(21% 70%, 36% 59%, 43% 64%);
+  animation: tail15 1.5s 3s ease infinite;
+}
+@keyframes tail15 {
+  90% {
+    clip-path: polygon(21% 69%, 33% 59%, 43% 64%);
+  }
+  100% {
+    clip-path: polygon(21% 70%, 36% 59%, 43% 64%);
+  }
+}
+.tail6 {
+  @include piece();
+  background-color: #622a21;
+  clip-path: polygon(18% 60%, 21% 70%, 36% 59%);
+  animation: tail16 1.5s 3s ease infinite;
+}
+@keyframes tail16 {
+  90% {
+    clip-path: polygon(18% 57%, 21% 69%, 33% 59%);
+  }
+  100% {
+    clip-path: polygon(18% 60%, 21% 70%, 36% 59%);
+  }
+}
+.tail7 {
+  @include piece();
+  background-color: #9e9d99;
+  clip-path: polygon(6% 47%, 18% 60%, 21% 70%);
+  animation: tail17 1.5s 3s ease infinite;
+}
+@keyframes tail17 {
+  90% {
+    clip-path: polygon(6% 43%, 18% 57%, 21% 70%);
+  }
+  100% {
+    clip-path: polygon(6% 47%, 18% 60%, 21% 70%);
+  }
+}
+.tail8 {
+  @include piece();
+  background-color: #fffffa;
+  clip-path: polygon(6% 47%, 23% 45%, 18% 60%);
+  animation: tail18 1.5s 3s ease infinite;
+}
+@keyframes tail18 {
+  90% {
+    clip-path: polygon(7% 45%, 23% 48%, 18% 57%);
+  }
+  100% {
+    clip-path: polygon(6% 47%, 23% 45%, 18% 60%);
+  }
+}
+.tail9 {
+  @include piece();
+  background-color: #fc6951;
+  clip-path: polygon(23% 45%, 32% 41%, 18% 60%);
+  animation: tail19 1.5s 3s ease infinite;
+}
+@keyframes tail19 {
+  90% {
+    clip-path: polygon(23% 48%, 34% 41%, 18% 57%);
+  }
+  100% {
+    clip-path: polygon(23% 45%, 32% 41%, 18% 60%);
+  }
+}
+.foot1 {
+  @include piece();
+  background-color: #1e0200;
+  clip-path: polygon(45% 72%, 44% 61%, 48% 64%, 50% 64%, 48% 72%);
+}
+.foot2 {
+  @include piece();
+  background-color: #1e0200;
+  clip-path: polygon(49% 64%, 50% 64%, 51% 63%, 53% 62%, 52% 71%, 49% 71%);
+}
+.foot3 {
+  @include piece();
+  background-color: #1e0200;
+  clip-path: polygon(63% 72%, 63% 64%, 67% 63%, 66% 72%);
+}
+.foot4 {
+  @include piece();
+  background-color: #1e0200;
+  clip-path: polygon(66% 71%, 67% 63%, 68% 63%, 68% 71%);
+}
+.eye {
+  @include piece();
+  background-color: #1e0200;
+  clip-path: polygon(82% 32%, 80% 29%, 82% 28%, 84% 32%);
+}
